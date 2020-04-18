@@ -44,7 +44,7 @@
 
         </div>
 
-        <div class="row mt-5">
+        <!-- <div class="row mt-5">
 
             <div class="card bg-dark text-light col-md-6">
                 <div class="card-body">
@@ -74,7 +74,7 @@
                 </div>
             </div>
 
-        </div>
+        </div> -->
     </div>
 </body>
 
