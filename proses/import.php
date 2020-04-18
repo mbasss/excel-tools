@@ -55,15 +55,16 @@ if (isset($_FILES['berkas_excel']['name']) && in_array($_FILES['berkas_excel']['
         $masalah_kesejahteraan      = $sheetData[$i]['30'];
         $gangguan_lingkungan        = $sheetData[$i]['31'];
         $bantuan_yang_diterima      = $sheetData[$i]['32'];
-        $keluhan_ke_pemerintah      = $sheetData[$i]['34'];
-        $catatan_tambahan           = $sheetData[$i]['35'];
+        $afiliasi_kelompok          = $sheetData[$i]['33'];
+        $gol_darah                  = $sheetData[$i]['34'];
+        $agama                      = $sheetData[$i]['35'];
         $tgl_pendataan              = $sheetData[$i]['36'];
         $nama_petugas               = $sheetData[$i]['37'];
         $foto_diri                  = $sheetData[$i]['38'];
-        $foto_ktp                   = $sheetData[$i]['38'];
+        $foto_ktp                   = $sheetData[$i]['39'];
         $foto_kk                    = $sheetData[$i]['40'];
         $peran_di_desa              = $sheetData[$i]['41'];
-        mysqli_query($koneksi, "insert into warga values ('$id_desa','$id_warga','$id_bangunan','$nomor_kk','$nomor_ktp','$nomor_hp','$nama_warga','$jenis_kelamin','$tempat_lahir','$tanggal_lahir','$hub_keluarga','$status_nikah','$kelengkapan_dokumen','$tercantum_di_kk_ini','$status_hamil','$status_hamil','$periksa_kehamilan_di','$jenis_kontrasepsi','$jenis_cacat','$penyakit_kronis','$keberadaan_sekarang','$partisipasi_sekolah','$nama_sekolah','$jenjang_sekolah_sekarang','$ijazah_tertinggi','$status_kerja','$lap_usaha','$keahlian_dimiliki','$penghasilan_perbulan','$kategori_sosial','$masalah_kesejahteraan','$gangguan_lingkungan','$bantuan_yang_diterima','$keluhan_ke_pemerintah','$catatan_tambahan','$tgl_pendataan','$nama_petugas','$foto_diri','$foto_ktp','$foto_kk','$peran_di_desa')");
+        mysqli_query($koneksi, "insert into warga values ('$id_desa','$id_warga','$id_bangunan','$nomor_kk','$nomor_ktp','$nomor_hp','$nama_warga','$jenis_kelamin','$tempat_lahir','$tanggal_lahir','$hub_keluarga','$status_nikah','$kelengkapan_dokumen','$tercantum_di_kk_ini','$status_hamil','$periksa_kehamilan_di','$jenis_kontrasepsi','$jenis_cacat','$penyakit_kronis','$keberadaan_sekarang','$partisipasi_sekolah','$nama_sekolah','$jenjang_sekolah_sekarang','$ijazah_tertinggi','$status_kerja','$lap_usaha','$keahlian_dimiliki','$penghasilan_perbulan','$kategori_sosial','$masalah_kesejahteraan','$gangguan_lingkungan','$bantuan_yang_diterima','$afiliasi_kelompok','$gol_darah','$agama','$tgl_pendataan','$nama_petugas','$foto_diri','$foto_ktp','$foto_kk','$peran_di_desa')");
     }
 
     echo "<script>alert('Data berhasil di Import!');history.go(-1);</script>";
