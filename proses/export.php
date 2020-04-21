@@ -127,5 +127,7 @@ $sheet->getStyle('A1:AX' . $i)->applyFromArray($styleArray);
 
 $writer = new Xlsx($spreadsheet);
 $writer->save('../Data Export/Data Warga.xlsx');
-echo "<script>alert('Data berhasil di Export!');history.go(-1);</script>";
+$url = "http://localhost/excel/Data Export/Data Warga.xlsx";
+header("Location: $url");
+// echo "<script>alert('Data berhasil di Export!');history.go(-1);</script>";
 // header("Location: ../index.php");
