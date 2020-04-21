@@ -124,10 +124,15 @@ $styleArray = [
 $i = $i - 1;
 $sheet->getStyle('A1:AX' . $i)->applyFromArray($styleArray);
 
+$files = glob('../Data Export/*'); // get all file names
+foreach ($files as $file) { // iterate files
+    if (is_file($file))
+        unlink($file); // delete file
+}
 
+$file_name = "Data Warga " . date("(Y-m-d h-i-s)") . ".xlsx";
 $writer = new Xlsx($spreadsheet);
-$writer->save('../Data Export/Data Warga.xlsx');
-$url = "http://localhost/excel/Data Export/Data Warga.xlsx";
+$writer->save('../Data Export/' . $file_name);
+$url = "http://localhost/excel/Data Export/" . $file_name;
 header("Location: $url");
-// echo "<script>alert('Data berhasil di Export!');history.go(-1);</script>";
-// header("Location: ../index.php");
+// echo "<script>alert(' Data berhasil di Ex p ort!');history.go(-1);</script>";
