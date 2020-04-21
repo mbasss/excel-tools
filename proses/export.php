@@ -48,6 +48,14 @@ $sheet->setCellValue('AM1', 'Foto Diri');
 $sheet->setCellValue('AN1', 'Foto KTP');
 $sheet->setCellValue('AO1', 'Foto KK');
 $sheet->setCellValue('AP1', 'Peran di Desa');
+$sheet->setCellValue('AQ1', 'Kewarganegaraan');
+$sheet->setCellValue('AR1', 'etnis');
+$sheet->setCellValue('AS1', 'akta_kawin');
+$sheet->setCellValue('AT1', 'akta_cerai');
+$sheet->setCellValue('AU1', 'NIK Ibu');
+$sheet->setCellValue('AV1', 'Nama Ibu');
+$sheet->setCellValue('AW1', 'NIK Ayah');
+$sheet->setCellValue('AX1', 'Nama Ayah');
 
 $query = mysqli_query($koneksi, "select * from warga");
 $i = 2;
@@ -95,6 +103,14 @@ while ($row = mysqli_fetch_array($query)) {
     $sheet->setCellValue('AN' . $i, $row['foto_ktp']);
     $sheet->setCellValue('AO' . $i, $row['foto_kk']);
     $sheet->setCellValue('AP' . $i, $row['peran_di_desa']);
+    $sheet->setCellValue('AQ' . $i, $row['kewarganegaraan']);
+    $sheet->setCellValue('AR' . $i, $row['etnis']);
+    $sheet->setCellValue('AS' . $i, $row['akta_kawin']);
+    $sheet->setCellValue('AT' . $i, $row['akta_cerai']);
+    $sheet->setCellValue('AU' . $i, $row['nik_ibu']);
+    $sheet->setCellValue('AV' . $i, $row['nama_ibu']);
+    $sheet->setCellValue('AW' . $i, $row['nik_ayah']);
+    $sheet->setCellValue('AX' . $i, $row['nama_ayah']);
     $i++;
 }
 
@@ -106,7 +122,7 @@ $styleArray = [
     ],
 ];
 $i = $i - 1;
-$sheet->getStyle('A1:AP' . $i)->applyFromArray($styleArray);
+$sheet->getStyle('A1:AX' . $i)->applyFromArray($styleArray);
 
 
 $writer = new Xlsx($spreadsheet);

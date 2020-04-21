@@ -2,6 +2,7 @@
 include('koneksi.php');
 require '../vendor/autoload.php';
 
+echo "<a href='../index.php'>Home</a> </br>";
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Reader\Csv;
 use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
@@ -65,11 +66,19 @@ if (isset($_FILES['berkas_excel']['name']) && in_array($_FILES['berkas_excel']['
         $foto_ktp                   = $sheetData[$i]['39'];
         $foto_kk                    = $sheetData[$i]['40'];
         $peran_di_desa              = $sheetData[$i]['41'];
+        $kewarganegaraan            = $sheetData[$i]['42'];
+        $etnis                      = $sheetData[$i]['43'];
+        $akta_kawin                 = $sheetData[$i]['44'];
+        $akta_cerai                 = $sheetData[$i]['45'];
+        $nik_ibu                    = $sheetData[$i]['46'];
+        $nama_ibu                   = $sheetData[$i]['47'];
+        $nik_ayah                   = $sheetData[$i]['48'];
+        $nama_ayah                  = $sheetData[$i]['49'];
         echo $no . ". " .  $nama_warga . "<br>";
 
-        mysqli_query($koneksi, "insert into warga values ('$id_desa','$id_warga','$id_bangunan','$nomor_kk','$nomor_ktp','$nomor_hp','$no','$nama_warga','$jenis_kelamin','$tempat_lahir','$tanggal_lahir','$hub_keluarga','$status_nikah','$kelengkapan_dokumen','$tercantum_di_kk_ini','$status_hamil','$periksa_kehamilan_di','$jenis_kontrasepsi','$jenis_cacat','$penyakit_kronis','$keberadaan_sekarang','$partisipasi_sekolah','$nama_sekolah','$jenjang_sekolah_sekarang','$ijazah_tertinggi','$status_kerja','$lap_usaha','$keahlian_dimiliki','$penghasilan_perbulan','$kategori_sosial','$masalah_kesejahteraan','$gangguan_lingkungan','$bantuan_yang_diterima','$afiliasi_kelompok','$gol_darah','$agama','$tgl_pendataan','$nama_petugas','$foto_diri','$foto_ktp','$foto_kk','$peran_di_desa')");
+        mysqli_query($koneksi, "insert into warga values ('$id_desa','$id_warga','$id_bangunan','$nomor_kk','$nomor_ktp','$nomor_hp','$nama_warga','$jenis_kelamin','$tempat_lahir','$tanggal_lahir','$hub_keluarga','$status_nikah','$kelengkapan_dokumen','$tercantum_di_kk_ini','$status_hamil','$periksa_kehamilan_di','$jenis_kontrasepsi','$jenis_cacat','$penyakit_kronis','$keberadaan_sekarang','$partisipasi_sekolah','$nama_sekolah','$jenjang_sekolah_sekarang','$ijazah_tertinggi','$status_kerja','$lap_usaha','$keahlian_dimiliki','$penghasilan_perbulan','$kategori_sosial','$masalah_kesejahteraan','$gangguan_lingkungan','$bantuan_yang_diterima','$afiliasi_kelompok','$gol_darah','$agama','$tgl_pendataan','$nama_petugas','$foto_diri','$foto_ktp','$foto_kk','$peran_di_desa','$kewarganegaraan','$etnis','$akta_kawin','$akta_cerai','$nik_ibu','$nama_ibu','$nik_ayah','$nama_ayah')");
     }
 
-    // echo "<script>alert('Data berhasil di Import!');history.go(-1);</script>";
+    echo "<a href='../index.php'>Home</a>";
     // header("Location: ../index.php");
 }
