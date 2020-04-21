@@ -5,16 +5,19 @@
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
 </head>
 
-<body>
+<body class=" bg-secondary">
+    <div class="jumbotron bg-dark text-light text-center">
+        <h1 class="display-4">Excel Tools</h1>
+        <p class="lead">Export Import Tabel Warga</p>
+        <hr class="my-1">
+    </div>
+
     <div class="container">
-        <div class="jumbotron">
-            <h1 class="display-4">Excel Tools</h1>
-            <p class="lead">Export Import Tabel Warga</p>
-            <hr class="my-4">
-        </div>
+
+
         <div class="row">
 
-            <div class="card col-md-6">
+            <div class="card col-md-6 mr-1 mb-1">
                 <div class="card-body">
                     <h5 class="card-title">Form Import Excel</h5>
                     <form method="post" enctype="multipart/form-data" action="proses/import.php">
@@ -27,7 +30,7 @@
                 </div>
             </div>
 
-            <div class="card col">
+            <div class="card col mr-1 mb-1">
                 <div class="card-body">
                     <h5 class="card-title">Form Export Excel</h5>
 
