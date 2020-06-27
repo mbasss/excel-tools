@@ -30,7 +30,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">Data Lahan</h5>
                         <p class="card-text">Import Expor Data Lahan</p>
-                        <a href="#" class="btn btn-primary">Masuk</a>
+                        <a href="views/lahan.php" class="btn btn-primary">Masuk</a>
                     </div>
                 </div>
             </div>

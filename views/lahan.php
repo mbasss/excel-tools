@@ -8,7 +8,7 @@
 <body class=" bg-secondary">
     <div class="jumbotron bg-dark text-light text-center">
         <h1 class="display-4">Excel Tools</h1>
-        <p class="lead">Export Import Tabel Warga</p>
+        <p class="lead">Export Import Tabel Lahan</p>
         <hr class="my-1">
         <a href="../index.php" class="btn btn-primary"><strong>Home</strong> </a>
     </div>
@@ -21,7 +21,7 @@
             <div class="card col-md-6 mr-1 mb-1">
                 <div class="card-body">
                     <h5 class="card-title">Form Import Excel</h5>
-                    <form method="post" enctype="multipart/form-data" action="proses/import_warga.php">
+                    <form method="post" enctype="multipart/form-data" action="proses/import_lahan.php">
                         <div class="form-group">
                             <label for="exampleInputFile">File Upload</label>
                             <input type="file" name="berkas_excel" class="form-control-file" id="exampleInputFile">
@@ -35,14 +35,14 @@
                 <div class="card-body">
                     <h5 class="card-title">Form Export Excel</h5>
 
-                    <p>File hasil export = htdocs/Data Export/<strong>Data Warga.xlsx</strong></p>
+                    <p>File hasil export = htdocs/Data Export/<strong>Data Lahan.xlsx</strong></p>
 
                     <div class="alert alert-warning p-0" role="alert">
                         Data Export otomatis replace !!!
                     </div>
 
                     <p></p>
-                    <a class="btn btn-success" href="proses/export_warga.php">Export</a>
+                    <a class="btn btn-success" href="proses/export_lahan.php">Export</a>
                 </div>
             </div>
 
