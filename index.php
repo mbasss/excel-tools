@@ -8,79 +8,47 @@
 <body class=" bg-secondary">
     <div class="jumbotron bg-dark text-light text-center">
         <h1 class="display-4">Excel Tools</h1>
-        <p class="lead">Export Import Tabel Warga</p>
+        <p class="lead">Export Import Tools</p>
         <hr class="my-1">
     </div>
 
     <div class="container">
-
-
         <div class="row">
-
-            <div class="card col-md-6 mr-1 mb-1">
-                <div class="card-body">
-                    <h5 class="card-title">Form Import Excel</h5>
-                    <form method="post" enctype="multipart/form-data" action="proses/import.php">
-                        <div class="form-group">
-                            <label for="exampleInputFile">File Upload</label>
-                            <input type="file" name="berkas_excel" class="form-control-file" id="exampleInputFile">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Import</button>
-                    </form>
-                </div>
-            </div>
-
-            <div class="card col mr-1 mb-1">
-                <div class="card-body">
-                    <h5 class="card-title">Form Export Excel</h5>
-
-                    <p>File hasil export = htdocs/Data Export/<strong>Data Warga.xlsx</strong></p>
-
-                    <div class="alert alert-warning p-0" role="alert">
-                        Data Export otomatis replace !!!
+            <div class="col-md-4 col-sm-12 ">
+                <div class="card">
+                    <img src="images/people.png" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Data Warga</h5>
+                        <p class="card-text">Import Expor Data Warga</p>
+                        <a href="views/warga.php" class="btn btn-primary">Masuk</a>
                     </div>
-
-                    <p></p>
-                    <a class="btn btn-success" href="proses/export.php">Export</a>
                 </div>
             </div>
-
+            <div class="col-md-4 col-sm-12">
+                <div class="card">
+                    <img src="images/land.png" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Data Lahan</h5>
+                        <p class="card-text">Import Expor Data Lahan</p>
+                        <a href="#" class="btn btn-primary">Masuk</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 mb-2">
+                <div class="card">
+                    <img src="images/building.png" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Data Bangunan</h5>
+                        <p class="card-text">Import Expor Data Bangunan</p>
+                        <a href="#" class="btn btn-primary">Masuk</a>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- <div class="row mt-5">
-
-            <div class="card bg-dark text-light col-md-6">
-                <div class="card-body">
-                    <h5 class="card-title">Form Import Excel Test</h5>
-                    <form method="post" enctype="multipart/form-data" action="proses/import_test.php">
-                        <div class="form-group">
-                            <label for="exampleInputFile">File Upload</label>
-                            <input type="file" name="berkas_excel" class="form-control-file" id="exampleInputFile">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Import</button>
-                    </form>
-                </div>
-            </div>
-
-            <div class="card bg-dark text-light col">
-                <div class="card-body">
-                    <h5 class="card-title">Form Export Excel Test</h5>
-
-                    <p>File hasil export = htdocs/Data Export/<strong>Data Test.xlsx</strong></p>
-
-                    <div class="alert alert-warning p-0" role="alert">
-                        Data Export otomatis replace !!!
-                    </div>
-
-                    <p></p>
-                    <a class="btn btn-success" href="proses/export_test.php">Export</a>
-                </div>
-            </div>
-
-        </div> -->
     </div>
 </body>
 
 </html>
 
+<script src="vendor/jquery-3.2.1.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.js"></script>
