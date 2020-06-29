@@ -30,7 +30,7 @@ if (isset($_FILES['berkas_excel']['name']) && in_array($_FILES['berkas_excel']['
         $id_lahan                       = $sheetData[$i]['2'];
         $asal_pemilik                   = $sheetData[$i]['3'];
         $nama_pemilik                   = addslashes($sheetData[$i]['4']);
-        $alamat_pemilik                 = $sheetData[$i]['5'];
+        $alamat_pemilik                 = addslashes($sheetData[$i]['5']);
         $id_pemilik                     = $sheetData[$i]['6'];
         $id_penanggungjawab             = addslashes($sheetData[$i]['7']);
         $afiliasi_kelompok              = $sheetData[$i]['8'];
@@ -55,7 +55,7 @@ if (isset($_FILES['berkas_excel']['name']) && in_array($_FILES['berkas_excel']['
         $jenis_fas_umum                 = $sheetData[$i]['27'];
         $transportasi_terparkir         = $sheetData[$i]['28'];
         $jenis_irigasi                  = $sheetData[$i]['29'];
-        $produk_dihasilkan              = $sheetData[$i]['30'];
+        $produk_dihasilkan              = addslashes($sheetData[$i]['30']);
         $jenis_ternak                   = $sheetData[$i]['31'];
         $lahan_gembala                  = $sheetData[$i]['32'];
         $jumlah_populasi                = $sheetData[$i]['33'];
@@ -65,17 +65,17 @@ if (isset($_FILES['berkas_excel']['name']) && in_array($_FILES['berkas_excel']['
         $pemasaran                      = $sheetData[$i]['37'];
         $luas_lahan                     = $sheetData[$i]['38'];
         $kondisi_hutan                  = $sheetData[$i]['39'];
-        $gangguan_dirasakan             = $sheetData[$i]['40'];
+        $gangguan_dirasakan             = addslashes($sheetData[$i]['40']);
         $dampak_ke_lingkungan           = $sheetData[$i]['41'];
         $foto_lahan                     = $sheetData[$i]['42'];
         $foto_fasilitas                 = $sheetData[$i]['43'];
         $foto_produk                    = $sheetData[$i]['44'];
         $koordinat                      = $sheetData[$i]['45'];
-        $nama_petugas                   = $sheetData[$i]['46'];
+        $nama_petugas                   = addslashes($sheetData[$i]['46']);
         $tgl_pendataan                  = $sheetData[$i]['47'];
         echo $no . ". " .  $id_pemilik . "<br>";
 
-        mysqli_query($koneksi, "insert into warga values ('$id_desa','$id_lahan','$asal_pemilik','$nama_pemilik','$alamat_pemilik','$id_pemilik','$id_penanggungjawab','$afiliasi_kelompok','$jenis_lahan','$status_lahan','$fungsi_lahan','$kelengkapan_dokumen','$kondisi_tanah','$luas_tanaman_pertahun','$nilai_produksi_pertahun','$biaya_pemupukan_pertahun','$biaya_bibit_pertahun','$biaya_obat_pertahun', `$biaya_lain_pertahun`, `$sarana_irigasi`, `$pjg_irigasi_primer`, `$pjg_irigasi_sekunder`, `$pjg_irigasi_tersier`, `$jml_pintu_sadap`, `$jm_pintu_air`, `$fasilitas_pendukung`, `$jenis_fas_umum`, `$transportasi_terparkir`, `$jenis_irigasi`, `$produk_dihasilkan`, `$jenis_ternak`, `$lahan_gembala`, `$jumlah_populasi`, `$omzet_pertahun`, `$modal_pertahun`, `$jml_pekerja`, `$pemasaran`, `$luas_lahan`, `$kondisi_hutan`, `$gangguan_dirasakan`, `$dampak_ke_lingkungan`, `$foto_lahan`, `$foto_fasilitas`, `$foto_produk`, `$koordinat`, `$nama_petugas`, `$tgl_pendataan`)");
+        mysqli_query($koneksi, "insert into lahan values ('$id_desa','$id_lahan','$asal_pemilik','$nama_pemilik','$alamat_pemilik','$id_pemilik','$id_penanggungjawab','$afiliasi_kelompok','$jenis_lahan','$status_lahan','$fungsi_lahan','$kelengkapan_dokumen','$kondisi_tanah','$luas_tanaman_pertahun','$nilai_produksi_pertahun','$biaya_pemupukan_pertahun','$biaya_bibit_pertahun','$biaya_obat_pertahun','$biaya_lain_pertahun','$sarana_irigasi','$pjg_irigasi_primer','$pjg_irigasi_sekunder','$pjg_irigasi_tersier','$jml_pintu_sadap','$jm_pintu_air','$fasilitas_pendukung','$jenis_fas_umum','$transportasi_terparkir','$jenis_irigasi','$produk_dihasilkan','$jenis_ternak','$lahan_gembala','$jumlah_populasi','$omzet_pertahun','$modal_pertahun','$jml_pekerja','$pemasaran','$luas_lahan','$kondisi_hutan','$gangguan_dirasakan','$dampak_ke_lingkungan','$foto_lahan','$foto_fasilitas','$foto_produk','$koordinat','$nama_petugas','$tgl_pendataan')");
     }
 
     echo "<a href='../index.php'>Home</a>";

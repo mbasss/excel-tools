@@ -120,7 +120,7 @@ $styleArray = [
     ],
 ];
 $i = $i - 1;
-$sheet->getStyle('A1:AX' . $i)->applyFromArray($styleArray);
+$sheet->getStyle('A1:AV' . $i)->applyFromArray($styleArray);
 
 $files = glob('../Data Export/*'); // get all file names
 foreach ($files as $file) { // iterate files
@@ -128,9 +128,9 @@ foreach ($files as $file) { // iterate files
         unlink($file); // delete file
 }
 
-$file_name = "Data Warga " . date("(Y-m-d h-i-s)") . ".xlsx";
+$file_name = "Data Lahan " . date("(Y-m-d h-i-s)") . ".xlsx";
 $writer = new Xlsx($spreadsheet);
 $writer->save('../Data Export/' . $file_name);
-$url = "http://localhost/excel/Data Export/" . $file_name;
+$url = $site_url . "Data Export/" . $file_name;
 header("Location: $url");
 // echo "<script>alert(' Data berhasil di Ex p ort!');history.go(-1);</script>";

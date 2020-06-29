@@ -21,7 +21,7 @@
             <div class="card col-md-6 mr-1 mb-1">
                 <div class="card-body">
                     <h5 class="card-title">Form Import Excel</h5>
-                    <form method="post" enctype="multipart/form-data" action="proses/import_lahan.php">
+                    <form method="post" enctype="multipart/form-data" action="../proses/import_lahan.php">
                         <div class="form-group">
                             <label for="exampleInputFile">File Upload</label>
                             <input type="file" name="berkas_excel" class="form-control-file" id="exampleInputFile">
@@ -42,7 +42,7 @@
                     </div>
 
                     <p></p>
-                    <a class="btn btn-success" href="proses/export_lahan.php">Export</a>
+                    <a class="btn btn-success" href="../proses/export_lahan.php">Export</a>
                 </div>
             </div>
 

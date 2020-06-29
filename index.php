@@ -40,7 +40,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">Data Bangunan</h5>
                         <p class="card-text">Import Expor Data Bangunan</p>
-                        <a href="#" class="btn btn-primary">Masuk</a>
+                        <a href="views/bangunan.php" class="btn btn-primary">Masuk</a>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,7 @@
 <?php
 include('koneksi.php');
 require '../vendor/autoload.php';
+
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
@@ -133,6 +134,6 @@ foreach ($files as $file) { // iterate files
 $file_name = "Data Warga " . date("(Y-m-d h-i-s)") . ".xlsx";
 $writer = new Xlsx($spreadsheet);
 $writer->save('../Data Export/' . $file_name);
-$url = "http://localhost/excel/Data Export/" . $file_name;
+$url = $site_url . "Data Export/" . $file_name;
 header("Location: $url");
 // echo "<script>alert(' Data berhasil di Ex p ort!');history.go(-1);</script>";
