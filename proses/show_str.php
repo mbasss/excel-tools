@@ -1,22 +1,26 @@
 <?php
+
+$sheetimport1 = '$sheetData[$i][';
+$sheetimport2 = "'];";
+
+$sheet1 = '$sheet->setCellValue(';
+$sheet2 = ' . $i, $row[';
+$sheet3 = ' ]);';
+$petik = "'";
+
+
+
 include('koneksi.php');
 
 $i = 1;
 $query = mysqli_query($koneksi, "DESC bangunan");
 while ($row = mysqli_fetch_row($query)) {
-    // echo "pvsheet->setCellValue(pa pb po pmi, plrow(pc " . $row[0] . "));<BR>"; 
+    // echo $sheet1 . $petik . "pb" . $petik . $sheet2 . $row[0] . $petik . $sheet3 . "<BR>";
     // echo "$" . $row[0] . "<BR>";
     // echo "'$" . $row[0] . "',";
-    // echo  "= pasheetData[pai]['" . $i++ . "']<BR>";
+    // echo  $sheetimport1 . $petik . $i++ . $sheetimport2 . "<BR>";
 }
 
-$query = mysqli_query($koneksi, "DESC lahan");
-while ($row = mysqli_fetch_row($query)) {
-    // echo "pvsheet->setCellValue(pa pb po pmi, plrow(pc " . $row[0] . "));<BR>"; 
-    // echo "$" . $row[0] . "<BR>";
-    echo "'$" . $row[0] . "',";
-    // echo  "= pasheetData[pai]['" . $i++ . "']<BR>";
-}
 
 
 
